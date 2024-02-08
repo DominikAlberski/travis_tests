@@ -5,6 +5,14 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_4b6fcb2d521e_key -iv $encrypted_4b6fcb2d521e_iv
   -in test.txt.enc -out test.txt -d
 - cat test.txt
+voult:
+  api_url: https://vault-dwztla.travis-ci.com
+  token:
+    secure: "vqnKwOx5Jf9aYEJGCpWyzCNFewxc9Y7v5QJA63WkR8lIwG9q056mI9dFc3bZPsgmLqNFiU+3pLhAj9aCOyzaJv7NiL/AhCRI04Rj4saTV28bYVi8ItDZ9iAkVII8b2m1h2mULj5xVhDIulA9vQLXklHuKVP2LIqfKGvetN7r6GvYV+QbAxXXaqQh1tj54bCn9Eu9JST0daY1c5DdBBuzpLTxH2tmWIqX5i3dCwbPeK9fvKsdbR6FsDEo/eQRAs9gBJGPEbNsL98dxeIgxhHNpP6FY6LNq7U+o2x1l2fT/RJkdcTZSdFt9e+/0rQBX/Gp9ymTBiyzeQytlSJLLd/mnzydzcnN4LD+KNXVJWsWcUAvQmnNaZVDj2/XI3JTjZ4YLNR4srd/WcpFRKiQkru4xmBil7F/bvDno++znsxKFLGAejfq+yRWVW/iaSaMsme7tPNxWyaF3HPjVSGQQ/tPUou9dClGqaPVfRrCkTVueC/0Qf1fd/09CheoXBpkOOl9mCXvU6P3cOXTgnL8ZsV7SHvMa7mAvv3KkNOM8CRBMeIyfEEcKW9FXrYZ5Uv3TI+38ek1ecgSZ17T03h+irE66uMuDMk2W/i9V4HZUD2rm+PLRQo/uzB1rnS99Us+Xu5Ihdot/4+tYhMwfVBTRLkM1LiZot1N/JjbGRPzLSxmjG8="
+  secrets:
+    - kv/foribm
+    - kv/qe
 script:
-- ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
+- ruby -e 'puts ENV["MY_ENV"] ? "This is MY_ENV: #{ENV['MY_ENV']}"  : "Hello, World!"'
 - cat test.txt
+- env
