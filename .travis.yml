@@ -13,6 +13,6 @@ voult:
     - kv/foribm
     - kv/qe
 script:
-- ruby -e 'puts ENV["MY_ENV"] ? "This is MY_ENV: #{ENV['MY_ENV']}"  : "Hello, World!"'
+- ruby -e 'puts(ENV["MY_ENV"] ? "This is MY_ENV: #{ENV['MY_ENV']}" : "Hello, World!")'
 - cat test.txt
 - env
