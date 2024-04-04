@@ -4,8 +4,6 @@ before_install:
 # - openssl aes-256-cbc -K $encrypted_4b6fcb2d521e_key -iv $encrypted_4b6fcb2d521e_iv
 #   -in test.txt.enc -out test.txt -d
 # - cat test.txt
-env:
-  - secure: r7X6SiP87dNjbtsh5COqnxqmTb8mPjWAQ3uBRM0MpW2lZnrXQJB821WwrOTrgHzpRwKuU2axpMBjCkHXNzDjlxxIOyHMLoUlOWmNlAM4uSp1iko0+knIy6vPibJ0QHDy4LX7QKgUACO859J1LQbKfCdxHJvp68p89L9N2HcQwiUyh7Hm+dqJDBFsBNgSNKxq09Ns3+O9A5oJIJGPH9Z7QCY0Gz3KtwBHFfRD6YanGLcBn9j3pUaWF1EhHmhQRgtFFxFMNIk6FF9MTX3DF4WaVtgUZwCAzJMqJWsu6mQO5f9xK0ZDvD1p4pOYf2Hk9hWXv+j96st0Cl9jV36ERHIQpd2RcNpGJac9tQKo8wL5suHIHEzyz+z+7CalDny6ag/ubIB9Y94JltLCFHxr/MKgMiP4s1BPjoDMfs/bLPz7521F5ZVa7wy0pvdz/f7hT19sDKBG2C7XGT8lsC0U0rX1AVSq90vS3/r1yn4WCkOYx9feyB1Foh55jLEbvrTecXyr6p3v4D3xkAwFfVPd9bnG64tReDno9yL++11J8A737QXjvqQULQCB/SwKSyd9F19rSbSjiYrqMk0YPbeBAWbEHDEECCnyn/qDI8kC+oBKOIbFm5bJJxK30+GXHojs87GzeEszzQHazlPVVWixfwzHq0azLRLmOGTH1zlBCopUlsQ=
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 # - cat test.txt
