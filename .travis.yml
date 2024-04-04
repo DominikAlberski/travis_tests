@@ -1,11 +1,14 @@
 language: ruby
 
-before_install:
+# before_install:
 # - openssl aes-256-cbc -K $encrypted_4b6fcb2d521e_key -iv $encrypted_4b6fcb2d521e_iv
 #   -in test.txt.enc -out test.txt -d
 # - cat test.txt
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
+- gem install travis
+- travis -v
+- travis whoami
 # - cat test.txt
 # jobs:
 #   include:
