@@ -10,9 +10,10 @@ rvm:
 # - cat test.txt
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
-- gem install travis
+- gem install travis --no-document
 - travis -v
 - travis whoami
+- gem install --dev travis --no-document
 # - cat test.txt
 # jobs:
 #   include:
