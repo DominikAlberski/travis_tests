@@ -14,6 +14,8 @@ script:
 - travis -v
 - travis whoami
 - gem install --dev travis --no-document
+- travis -v
+- travis whoami
 # - cat test.txt
 # jobs:
 #   include:
