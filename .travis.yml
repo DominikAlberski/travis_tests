@@ -6,6 +6,7 @@ before_install:
 # - cat test.txt
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
+- ruby script.rb
 # - cat test.txt
 # jobs:
 #   include:
