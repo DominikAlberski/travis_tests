@@ -1,0 +1,2 @@
+script:
+  - ruby -e '"Hello, From imported script commit example_commit_message_1 1!"'
