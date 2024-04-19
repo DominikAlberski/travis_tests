@@ -2,8 +2,22 @@ os: linux
 dist: focal
 language: ruby
 
-script:
-- ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
+env:
+  - COSIGN_EXPERIMENTAL=1
+services:
+  - docker
 
-import:
-  - source: "%{commit_message}/.print.yml"
+keys:
+  - COSSIGN # must match the key identifier set in the UI
+
+before_script:
+  - travis_key COSSIGN cosign.key  # cosign requires the key to be in a file
+
+script:
+  - docker login -u dominikalberski841 -p "${DOCKER_HUB_PASSWORD}"
+  - docker build -t dominikalberski841/hello-world .
+  - docker tag hello-world dominikalberski841/hello-world
+  - docker push dominikalberski841/hello-world
+  - cosign sign --key cosign.key dominikalberski841/hello-world
+  - cosign verify --key cosign.pub dominikalberski841/hello-world
+  - docker logout
