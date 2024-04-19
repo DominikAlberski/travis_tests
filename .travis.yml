@@ -11,13 +11,16 @@ keys:
   - COSSIGN # must match the key identifier set in the UI
 
 before_script:
+  - echo "before script started"
   - travis_key COSSIGN cosign.key  # cosign requires the key to be in a file
 
 script:
+  - echo "script started"
   - docker login -u dominikalberski841 -p "${DOCKER_HUB_PASSWORD}"
   - docker build -t dominikalberski841/hello-world .
   - docker tag hello-world dominikalberski841/hello-world
   - docker push dominikalberski841/hello-world
+  - echo "docker image pushed"
   - cosign sign --key cosign.key dominikalberski841/hello-world
   - cosign verify --key cosign.pub dominikalberski841/hello-world
   - docker logout
