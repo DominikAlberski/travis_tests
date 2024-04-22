@@ -4,15 +4,17 @@ language: ruby
 
 env:
   - COSIGN_EXPERIMENTAL=1
+  - COSIGN_PASSWORD="${COS_PAS}"
+
 services:
   - docker
 
 keys:
-  - COSIGN # must match the key identifier set in the UI
+  - COSIGN_PKC # must match the key identifier set in the UI
 
 before_script:
   - echo "before script started"
-  # - travis_key COSIGN cosign.key  # cosign requires the key to be in a file
+  - travis_key COSIGN_PKC cosign.key  # cosign requires the key to be in a file
 
 script:
   - echo "script started"
@@ -21,7 +23,7 @@ script:
   - docker tag dominikalberski841/hello-world:latest dominikalberski841/hello-world:0.0.1
   - docker push dominikalberski841/hello-world:0.0.1
   - echo "docker image pushed"
-  - export COSIGN_PASSWORD="${COS_PAS}"
+  # - export COSIGN_PASSWORD="${COS_PAS}"
   - cosign version
   - cosign sign --key cosign.key dominikalberski841/hello-world:0.0.1
   - cosign verify --key cosign.pub dominikalberski841/hello-world:0.0.1
