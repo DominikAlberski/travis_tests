@@ -8,12 +8,12 @@ env:
 services:
   - docker
 
-keys:
-  - COSIGN_PKC # must match the key identifier set in the UI
+# keys:
+#   - COSIGN_PKC # must match the key identifier set in the UI
 
-before_script:
-  - echo "before script started"
-  - travis_key COSIGN_KEY cosign.key  # cosign requires the key to be in a file
+# before_script:
+  # - echo "before script started"
+  # - travis_key COSIGN_KEY cosign.key  # cosign requires the key to be in a file
 
 script:
   - echo "script started"
