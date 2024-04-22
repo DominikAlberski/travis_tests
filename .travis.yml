@@ -12,7 +12,7 @@ keys:
 
 before_script:
   - echo "before script started"
-  - travis_key COSIGN cosign.key  # cosign requires the key to be in a file
+  # - travis_key COSIGN cosign.key  # cosign requires the key to be in a file
 
 script:
   - echo "script started"

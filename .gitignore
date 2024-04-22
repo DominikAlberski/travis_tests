@@ -58,4 +58,4 @@ build-iPhoneSimulator/
 test.txt
 
 # secrets
-cosign.key
+# cosign.key
