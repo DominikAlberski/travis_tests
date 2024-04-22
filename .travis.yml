@@ -25,6 +25,6 @@ script:
   - docker push dominikalberski841/hello-world:0.0.1
   - echo "docker image pushed"
   # - export COSIGN_PASSWORD="${COS_PAS}"
-  - cosign sign --key cosign.key dominikalberski841/hello-world:0.0.1
+  - yes | cosign sign --key cosign.key dominikalberski841/hello-world:0.0.1
   - cosign verify --key cosign.pub dominikalberski841/hello-world:0.0.1
   - docker logout
