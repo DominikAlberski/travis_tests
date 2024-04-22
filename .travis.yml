@@ -18,7 +18,7 @@ script:
   - echo "script started"
   - docker login -u dominikalberski841 -p "${DOCKER_HUB_PASSWORD}"
   - docker build -t dominikalberski841/hello-world .
-  - docker tag hello-world dominikalberski841/hello-world
+  # - docker tag hello-world dominikalberski841/hello-world
   - docker push dominikalberski841/hello-world
   - echo "docker image pushed"
   - cosign sign --key cosign.key dominikalberski841/hello-world
