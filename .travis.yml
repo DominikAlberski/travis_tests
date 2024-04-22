@@ -21,6 +21,6 @@ script:
   - docker tag dominikalberski841/hello-world:latest dominikalberski841/hello-world:0.0.1
   - docker push dominikalberski841/hello-world:0.0.1
   - echo "docker image pushed"
-  - cosign sign --key cosign.key dominikalberski841/hello-world:0.0.1
+  - echo | cosign sign --key cosign.key dominikalberski841/hello-world:0.0.1
   - cosign verify --key cosign.pub dominikalberski841/hello-world:0.0.1
   - docker logout
