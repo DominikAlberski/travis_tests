@@ -11,7 +11,9 @@ services:
 # keys:
 #   - COSIGN_PKC # must match the key identifier set in the UI
 
-# before_script:
+before_script:
+  - cosign version
+  - cosign generate-key-pair
   # - echo "before script started"
   # - travis_key COSIGN_KEY cosign.key  # cosign requires the key to be in a file
 
@@ -23,7 +25,6 @@ script:
   - docker push dominikalberski841/hello-world:0.0.1
   - echo "docker image pushed"
   # - export COSIGN_PASSWORD="${COS_PAS}"
-  - cosign version
   - cosign sign --key cosign.key dominikalberski841/hello-world:0.0.1
   - cosign verify --key cosign.pub dominikalberski841/hello-world:0.0.1
   - docker logout
