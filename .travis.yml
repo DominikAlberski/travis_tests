@@ -1,16 +1,30 @@
 language: ruby
 
-before_install:
-# - openssl aes-256-cbc -K $encrypted_4b6fcb2d521e_key -iv $encrypted_4b6fcb2d521e_iv
-#   -in test.txt.enc -out test.txt -d
-# - cat test.txt
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 - ruby script.rb
-# - cat test.txt
-# jobs:
-#   include:
-#     - os: osx
-#       osx_image: xcode14.2
-#       rvm:
-#         - "3.2"
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - echo "Running stage tests"
+    - stage: test
+      script:
+        - echo "Running failing tests"
+        - echo "going to sleep for 5 seconds"
+        - ruby -e 'sleep 5'
+        - echo "done sleeping"
+        - ruby -e 'raise "Fail"'
+    - stage: foo
+      script:
+        - echo "Running foo stage"
+        - echo "going to sleep for 10 seconds"
+        - ruby -e 'sleep 10'
+        - echo "done sleeping in foo stage"
+    - stage: deploy
+      script:
+        - echo "this should not run"
+    - stage: deploy
+      script:
+        - echo "this should not run"

@@ -1,1 +1,1 @@
-puts "Hello From Sript"
+puts "Hello From Script"
