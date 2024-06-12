@@ -12,15 +12,17 @@ jobs:
     - stage: test
       script:
         - echo "Running failing tests"
-        - echo "going to sleep for 5 seconds"
-        - ruby -e 'sleep 5'
-        - echo "done sleeping"
         - ruby -e 'raise "Fail"'
+    - stage: test
+      script:
+        - echo "going to sleep for 10 seconds"
+        - ruby -e 'sleep 10'
+        - echo "done sleeping"
     - stage: foo
       script:
         - echo "Running foo stage"
-        - echo "going to sleep for 10 seconds"
-        - ruby -e 'sleep 10'
+        - echo "going to sleep for 5 seconds"
+        - ruby -e 'sleep 5'
         - echo "done sleeping in foo stage"
     - stage: deploy
       script:
