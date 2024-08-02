@@ -9,11 +9,11 @@ deploy:
     branch: main
 notifications:
   slack:
-  - on_success: change
+    on_success: change
     on_failure: always
     template:
     - "%{repository_slug} Deployment (%{commit}) : %{message}"
-    - 'Performed by: ${author}'
+    - 'Performed by: %{author}'
     - 'Build details: %{build_url}'
     rooms:
     - secure: DNFowQYdeHe2y5FrX//ljfW7x0bV6GuZV10jA1PNS+/dwhXqJk72IoujKsxkKPQ8idMjEwUtvz2n0HR4vW8QOHHXBZSu30WdvAXJwddBT/0uW2W2t5s1cbmfs+6CWoXDui1vcUajKobaAfZaxTvUt0ap11rYouoep89DEyryazqFe+cIHKrgX1uEkMM0gdCLTT+agpd6EadXaMlPU1XBrwqTdcsDfIfdpPVJo48U8k15ZUBfWTWpq7kdB7Ba0QFiseiKSi+jjTE2+1l1oVk+2NhA95fUDmY7ZiEv+Yhcf5pOuBv9AU6OYDQNnUp5IS/57o2Zgx6jxfsServpJmTUWb4ti1bMWtZOKZ4CaDBxGFuuh7WoZNK81BWavx711zkLH1ie2Cjj+sTYDKFho1XVzFYE45WWCuI7AoBnyiSeVdD31h85ht+rykFLvwLn1COgyzQL+AxBZpCNOac7qpG+cikAkNfBbyFj/fqlbA2FKg/zgMnbSomEMW6hfmaJ8J33oukMUr8xUtVPOiseX8QpVeBXx6WGAT8iKpg4uBg5AwxSWzOVMWhzzqB/Ug2qb+SwDeftriuZUV3vvGwbaxRa4mezjnAt1o2nNZk3dtlCs3MdxyjMF1EZnY3rhzoYi9h4mlhlkRunhxY1zCFVlZKLR2r1Pv8lPKwe+WZ+o/HStsw=
