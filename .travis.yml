@@ -4,6 +4,8 @@ script:
 before_deploy:
   # check uri gem version
   - gem list uri
+  # update uri gem
+  - gem update uri
 deploy:
   provider: pages:git
   token: "$GH-TOKEN"
