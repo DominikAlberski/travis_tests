@@ -2,7 +2,6 @@ language: ruby
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 before_deploy:
-  script:
   # check uri gem version
   - gem list uri
 deploy:
