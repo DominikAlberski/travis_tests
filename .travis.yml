@@ -6,8 +6,9 @@ before_deploy:
   - gem list uri
 deploy:
   provider: pages:git
-  edge: true
   token: "$GH-TOKEN"
+  dpl_version: 2.0.5.beta.1
+  edge: true
   on:
     branch:
     - main
