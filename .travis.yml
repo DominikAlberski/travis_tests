@@ -11,7 +11,7 @@ deploy:
   provider: pages
   token: "$GITHUB_TOKEN"
   # dpl_version: 2.0.5.beta.1
-  # edge: true
+  edge: true
   on:
     branch:
     - main
