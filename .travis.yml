@@ -10,8 +10,8 @@ deploy:
   # provider: pages:git
   provider: pages
   token: "$GITHUB_TOKEN"
-  dpl_version: 2.0.3.beta.4
-  edge: true
+  # dpl_version: 2.0.3.beta.4
+  # edge: true
   on:
     branch:
     - main
