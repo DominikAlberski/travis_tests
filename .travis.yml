@@ -1,4 +1,4 @@
-dist: bionic
+dist: focal
 language: ruby
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
@@ -8,11 +8,14 @@ before_deploy:
   # update uri gem
   # - gem update uri
 deploy:
-  # provider: pages:git
-  provider: pages
+  provider: pages:git # this differs from schibsted
   token: "$GITHUB_TOKEN"
-  # dpl_version: 2.0.3.beta.4
-  # edge: true
+  verbose: true
+  edge: true
+  cleanup: false
+  keep_history: true
+  url: github.com
+  local_dir: pages/
   on:
     branch:
     - main
