@@ -6,7 +6,8 @@ before_deploy:
   # check uri gem version
   # - gem list uri
   # update uri gem
-  # - gem update uri
+  - gem update uri
+  - gem update logger
 deploy:
   provider: pages:git # this differs from schibsted
   token: "$GITHUB_TOKEN"
