@@ -6,14 +6,14 @@ before_deploy:
   # check uri gem version
   # - gem list uri
   # update uri gem
-  - gem uninstall uri
-  - gem install uri -v 0.13.0
+  # - gem uninstall uri
+  # - gem install uri -v 0.13.0
 deploy:
   provider: pages:git # this differs from schibsted
   token: "$GITHUB_TOKEN"
   verbose: true
   edge:
-    branch: "2.0.5.beta.2"
+    branch: "2.0.5.beta.3"
   cleanup: false
   keep_history: true
   url: github.com
