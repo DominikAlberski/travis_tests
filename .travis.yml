@@ -1,4 +1,5 @@
 dist: focal
+group: previous
 language: ruby
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
