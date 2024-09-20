@@ -13,7 +13,7 @@ deploy:
   token: "$GITHUB_TOKEN"
   verbose: true
   edge:
-    branch: "2.0.5.beta.3"
+    branch: "2.0.5.beta.2.1"
   cleanup: false
   keep_history: true
   url: github.com
