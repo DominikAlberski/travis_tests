@@ -10,9 +10,9 @@ deploy:
     branch: main
 notifications:
   slack:
-    template:
-    - "%{repository_slug} Deployment (%{commit}) : %{message}"
-    - 'Performed by: %{author}'
-    - 'Build details: %{build_url}'
+    # template:
+    # - "%{repository_slug} Deployment (%{commit}) : %{message}"
+    # - 'Performed by: %{author}'
+    # - 'Build details: %{build_url}'
     secure: "idioidTkIC8VYHLoxSrGWsn3Vg9ur8hC2jWi61fv4X4IoqoaeF5oweEaALSNXYolZvcxOmx23U9KT4zMy6MkGkdtDWX28grbudGmOos/N5UKsrtYguEfFSwLJJCkcpfzVw2rPDL27JqZZkp+hNzlJ/XjdNC5+V9VBJahiIP58pJwb5dfnfcPhU+PLRRUlYYNH/J09Pw+rvpzKU2DGOiRCjA3D6no0zL64klRlK4lEM1H2d3TRc3ixP0Vp+UeuzlNrlMyBnw3NOQqKGMlemxcTgk8g18a0PTR6GmKHwnx2NV4BXR3WE4P8Qop3IT0RVzfqQ6kzPnrvQqC3dPf4pDaHvYY3WWQfdEDqowSIdA/6zOkqPlElJqrDRiX4lNw7c1EDbGEZS9v+Q/3CMoKaNSUCXvzG0lqRD/xeCBXeazgx09ooOE8jrLdOntAkmEGA9ua5qJ+uQaV67nUtSvqlkeHurZ719tgCyXnhK6kJ4yWgKK5FGlPGHLWqwaPwWs73KBdJ3isjxp1FShlpDpLaEtGaldvOfRHidO/eUjj1rxbqq9VZj+t0uyo9XUjcP8q7WdX+XMgf2Pk8hbDTwI6W9kzW6hO00suAEscmgu7lUEs3t885Kkrvp63zzyI6Qnoo9kFXkSslTjMPAvDrgo1L3nlTTyB7515XgoeOlBhaLW79Q0="
 
