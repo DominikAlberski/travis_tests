@@ -11,7 +11,7 @@ deploy:
 notifications:
   slack:
     rooms:
-      - ENV["SLACK_ROOM_TCI"]
+      secure: "SM3BeMT+iGtmmoDuXSngrqM32gAz0Th2l+LDwj0o6eOtonxXDJXonBEdaBPXH+T/omF6eKQFGe0TRYuR1wx4tOZxU+y6ybcaaAwRzjHYfIZY38BkHW9J42AHuVMjTHTK3jHxVfqgh2/OSZ/+9dvL0DJrvo+m0+B5blzHHB2pgyCwZO5wdYC2N96dMrmUqq8sWkSr1k9StULtplAcBb/vjPlgArjvtMhkn0hNkJl9DyVpLejYRwGbLaogX3akZF7lOYj9onHZ3ogLxzBjKiWh5TzHkFe7h+SMVheWL+qZbfrER0LmmsRP4kOKnwSx1DDmrbMfoP8u1GKaU81NqbGztgnnDJAdfdmCtAChxKxN0BeYObSGpvJ45Yj/lepU8KPswS0ZNfSJMsxz65f3A/qt+C686iw9GfjaD5iGxvfIc/sJwcfVLUPueLP8ZCo5NbdMPDNl9wDtnYaVaJ4hDCWASNgdWy0xGf1SMTEhyc9+7ekAS42smzWb8haLDAzsBfEYbUA6bCA0cfXFB1jJinpKZo5jOfaailC7T1xVsmYFmYCU9Yariq4Qx4qy4shCwGGg8MT2DauNTWKEt1Fj6r0+GRGxjtz5KV7g76H8OMkzhqGauw1rjO7jQ+V0FLMc4a8u84P/BWhOsx3g+nJf/fnCTDCB6x4KAvOYgVWYe5suw3U="
     # template:
     # - "%{repository_slug} Deployment (%{commit}) : %{message}"
     # - 'Performed by: %{author}'
