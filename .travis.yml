@@ -11,7 +11,7 @@ deploy:
 notifications:
   slack:
     rooms:
-      - travis-testworkspace:jTiR7Pzm8DiIMNfuldB34Q7p#tci
+      - ENV["SLACK_ROOM_TCI"]
     # template:
     # - "%{repository_slug} Deployment (%{commit}) : %{message}"
     # - 'Performed by: %{author}'
