@@ -11,7 +11,8 @@ deploy:
 notifications:
   slack:
     rooms:
-      - secure: ZLAajSjCEkSn2XHrGdKiSpUoQ2KSBkW2pYGpHyCcKz2SPFqIQSMRQtS11iOmnwZIen5YCpfETUJMnciOzTIBHc/qHcpz1s8Tt41I/+qvT1YKG/vcm4/6e9pMeW1HgkfJJ/9AU7mqrDk+HnfNtNeyj98LTvvM3u+CiHtTBFuiiTtjVH2DvFreMEhiCMuFDz+wkGye16RPr4w1yIhYiu3Hl/Ax5IkNJXE49EIPNua61kKj/JVzrdqzRm3qLqfWQZRZ/A3CnjN/Z4fVqAZg/v4mhoZveQEJNlHLUPNh7m17w/ZKjJgn7d2Yov/OWe1+jGPMtvQb3DnZBe+7KXB2i+nNZFXczB4Oj+KpzpdCKK4SGe2U1kp6qkfeFIe9GfCyTGaWeU9DEFGvabGccl7aXgltmxCKZ2fL5dZfKEU1uZypjMTlByBcNoIhwk9uvs7GDpNCZD1NHVQc5YlY6eci7sEXEWBIW1dcrAtVHz4+NtAo/p+L37hAYxor8KwUFhvbkd9HVincpUwmeExgBGiQsoaaQ7NsuQX8UoxHdJ5bjnOWGY9wPZGtdtELg49JYTzo9WvP11ef2o6NnEtABhMfKmgVcnP6AfjVJo75L6CewUZ4G5Cgi8GVNXdvd5FXM+lhoEISTUUpTb29X1s0RX+vDEni/2EOAoVvZ564Z/1mRuD2+vU=
+      - travis-testworkspace:jTiR7Pzm8DiIMNfuldB34Q7p#tci
+      #- secure: ZLAajSjCEkSn2XHrGdKiSpUoQ2KSBkW2pYGpHyCcKz2SPFqIQSMRQtS11iOmnwZIen5YCpfETUJMnciOzTIBHc/qHcpz1s8Tt41I/+qvT1YKG/vcm4/6e9pMeW1HgkfJJ/9AU7mqrDk+HnfNtNeyj98LTvvM3u+CiHtTBFuiiTtjVH2DvFreMEhiCMuFDz+wkGye16RPr4w1yIhYiu3Hl/Ax5IkNJXE49EIPNua61kKj/JVzrdqzRm3qLqfWQZRZ/A3CnjN/Z4fVqAZg/v4mhoZveQEJNlHLUPNh7m17w/ZKjJgn7d2Yov/OWe1+jGPMtvQb3DnZBe+7KXB2i+nNZFXczB4Oj+KpzpdCKK4SGe2U1kp6qkfeFIe9GfCyTGaWeU9DEFGvabGccl7aXgltmxCKZ2fL5dZfKEU1uZypjMTlByBcNoIhwk9uvs7GDpNCZD1NHVQc5YlY6eci7sEXEWBIW1dcrAtVHz4+NtAo/p+L37hAYxor8KwUFhvbkd9HVincpUwmeExgBGiQsoaaQ7NsuQX8UoxHdJ5bjnOWGY9wPZGtdtELg49JYTzo9WvP11ef2o6NnEtABhMfKmgVcnP6AfjVJo75L6CewUZ4G5Cgi8GVNXdvd5FXM+lhoEISTUUpTb29X1s0RX+vDEni/2EOAoVvZ564Z/1mRuD2+vU=
     # template:
     # - "%{repository_slug} Deployment (%{commit}) : %{message}"
     # - 'Performed by: %{author}'
