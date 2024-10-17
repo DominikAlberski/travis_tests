@@ -11,11 +11,11 @@ deploy:
 notifications:
   slack:
     - rooms:
-        - travis-testworkspace:jTiR7Pzm8DiIMNfuldB34Q7p
+        - travis-testworkspace:jTiR7Pzm8DiIMNfuldB34Q7p#tci
       on_success: always
       on_failure: always
     - rooms:
-        - travis-testworkspace:LOKiRm5HRCiXHYQWJSzMs8Ik#build_faild_staging
+        - travis-testworkspace:LOKiRm5HRCiXHYQWJSzMs8Ik#build_fail_staging
       on_success: never
       on_failure: always
 
