@@ -20,6 +20,15 @@ notifications:
         - 'Performed by: %{author}'
         - 'Build details: %{build_url}'
     - rooms:
+      secure: "pzam0I6j0MejaStBOwjGTHl9yTIimIgsRidtzcF5pol9Xrqq3KJqcmPyJjQlLB4tA7syhVFNv2h0pB6hThpskLKy3k4nRTM6gs4N7ojR2yBOBLqV/kAid/zigM9GoxMBfKnjCOpN4fIDw4SbRHuE6rtbiZMEwOOjE1C+8xfm7ZwFHDOV/9vQMnX2KF045ZYv+xW50HWM9qRhv99z9aUqGeqtOmsBQT9G9XqYa4KrCA62YPeaOr+y/AX13H/x21AsN3vUx7O5ajILF+FRc/sexWmh6hg5jhkFMWtgqub950775Skj1/2HQXRndik0Tw8pL/N7rjHUG8xRQafNgTKBCtijuotVg3CFYBdGqHsZuItB7MwR4jXWxPovKPp/0xLNmI4u2t66aKJ94lVg0CDgN1dJUj8lgEHTUwxAYzggEiqhOLdXIF4GvTihZou/KUPjME0KXdFRGmuNKaO4t4gl+Zmw07hOPEAsFzSO9+zAGpIpUcxcKw/2xBVkXzupOfauOpg6GUD9Bb7Z1qjSYnIurL29nrDMnE1s+ALU3bZhY9Le4f/pPRMl86sXHbmYdzTIZ3KdSY9dFLt8idHK2zhSAq8rjTM9SJWcKM/EersDavel6FzJJbdSv30cPsn8FV461t5/K6I1Ezaq298+7zh+k0dMlSrZc4PapZjsEWT/Szk="
+      on_success: always
+      on_failure: always
+      template:
+        - "secure token made for production"
+        - "%{repository_slug} Deployment (%{commit}) : %{message}"
+        - 'Performed by: %{author}'
+        - 'Build details: %{build_url}'
+    - rooms:
         - travis-testworkspace:LOKiRm5HRCiXHYQWJSzMs8Ik#build_fail_staging
       on_success: never
       on_failure: always
