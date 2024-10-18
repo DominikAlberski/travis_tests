@@ -14,10 +14,20 @@ notifications:
         secure: "Y0WkV3PsAhs2Kc1l+2FUpjjRHy8rI4Cn26Fl0eUbxBWNYV3qndDboHT10xBqsCInubU6RpluxG+WQwEjDW+u9lLGkWR+3PCjZaxPB9aGrgL9XSlrphY69RpM5gBPeKXxhHHNEyzWsuB2fempa3bjwoDIlbFUNr1G4l+Zh8jaVoCM8E17cxu3X3jGqGL2upoZb13lJ/wJlwiwV5e3rmxM/6tMxKoG8sjsnssRDl7Au8+4ek2i4hZ1VVnwlk4jjxKDHx16rTIkhjKFs2YY6gkKCKr8LBWQleNDx7wWOlyRLVxFmODovsaGnRGozLnYHClFR0LOt3fymQ7PGveK66gN37mzhD+usJp0WDcFlNLMk1yX843U1cN9rl14iUa9E6+7X5Sle9bxQTrRtXkKNXZD3D7WGXih0Vg2Ky5ecPtc+FUwcwotRFcYfFdk8lPu5ggbgjcDnjMnLcX8rIwOiIw+EKSXEoLvH/gUwrtiFfu5HnNNOVnSnJKV4ZbabNBm019NXfzXRHJbvQeP5iLSr9I8qezMHIsEJzQ41CFML5g8lYXeH8eW2avo22fcNXdhcrljPTtWYgNnxYX3XX5cEJKFjxHj6daLYWi2lpAg3E4xy3KyPT7Cx6sgy/txrUW+Ma1PLNTwAgvhHyhk4p6o+zlrUKHOddxT4J/D7ZnfmewisQE="
       on_success: always
       on_failure: always
+      template:
+        - "secure token made for qe2"
+        - "%{repository_slug} Deployment (%{commit}) : %{message}"
+        - 'Performed by: %{author}'
+        - 'Build details: %{build_url}'
     - rooms:
         - travis-testworkspace:LOKiRm5HRCiXHYQWJSzMs8Ik#build_fail_staging
       on_success: never
       on_failure: always
+      template:
+        - "plain token"
+        - "%{repository_slug} Deployment (%{commit}) : %{message}"
+        - 'Performed by: %{author}'
+        - 'Build details: %{build_url}'
 
 
 
