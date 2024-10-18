@@ -11,13 +11,11 @@ deploy:
 notifications:
   slack:
     - rooms:
-        secure: "Y0WkV3PsAhs2Kc1l+2FUpjjRHy8rI4Cn26Fl0eUbxBWNYV3qndDboHT10xBqsCInubU6RpluxG+WQwEjDW+u9lLGkWR+3PCjZaxPB9aGrgL9XSlrphY69RpM5gBPeKXxhHHNEyzWsuB2fempa3bjwoDIlbFUNr1G4l+Zh8jaVoCM8E17cxu3X3jGqGL2upoZb13lJ/wJlwiwV5e3rmxM/6tMxKoG8sjsnssRDl7Au8+4ek2i4hZ1VVnwlk4jjxKDHx16rTIkhjKFs2YY6gkKCKr8LBWQleNDx7wWOlyRLVxFmODovsaGnRGozLnYHClFR0LOt3fymQ7PGveK66gN37mzhD+usJp0WDcFlNLMk1yX843U1cN9rl14iUa9E6+7X5Sle9bxQTrRtXkKNXZD3D7WGXih0Vg2Ky5ecPtc+FUwcwotRFcYfFdk8lPu5ggbgjcDnjMnLcX8rIwOiIw+EKSXEoLvH/gUwrtiFfu5HnNNOVnSnJKV4ZbabNBm019NXfzXRHJbvQeP5iLSr9I8qezMHIsEJzQ41CFML5g8lYXeH8eW2avo22fcNXdhcrljPTtWYgNnxYX3XX5cEJKFjxHj6daLYWi2lpAg3E4xy3KyPT7Cx6sgy/txrUW+Ma1PLNTwAgvhHyhk4p6o+zlrUKHOddxT4J/D7ZnfmewisQE="
+        - travis-testworkspace:jTiR7Pzm8DiIMNfuldB34Q7p#tci
       on_success: always
       on_failure: always
       template:
-        - "secure token made for qe2"
-        - "%{repository_slug} Deployment (%{commit}) : %{message}"
-        - 'Performed by: %{author}'
+        - "plain token"
         - 'Build details: %{build_url}'
     - rooms:
       secure: "pzam0I6j0MejaStBOwjGTHl9yTIimIgsRidtzcF5pol9Xrqq3KJqcmPyJjQlLB4tA7syhVFNv2h0pB6hThpskLKy3k4nRTM6gs4N7ojR2yBOBLqV/kAid/zigM9GoxMBfKnjCOpN4fIDw4SbRHuE6rtbiZMEwOOjE1C+8xfm7ZwFHDOV/9vQMnX2KF045ZYv+xW50HWM9qRhv99z9aUqGeqtOmsBQT9G9XqYa4KrCA62YPeaOr+y/AX13H/x21AsN3vUx7O5ajILF+FRc/sexWmh6hg5jhkFMWtgqub950775Skj1/2HQXRndik0Tw8pL/N7rjHUG8xRQafNgTKBCtijuotVg3CFYBdGqHsZuItB7MwR4jXWxPovKPp/0xLNmI4u2t66aKJ94lVg0CDgN1dJUj8lgEHTUwxAYzggEiqhOLdXIF4GvTihZou/KUPjME0KXdFRGmuNKaO4t4gl+Zmw07hOPEAsFzSO9+zAGpIpUcxcKw/2xBVkXzupOfauOpg6GUD9Bb7Z1qjSYnIurL29nrDMnE1s+ALU3bZhY9Le4f/pPRMl86sXHbmYdzTIZ3KdSY9dFLt8idHK2zhSAq8rjTM9SJWcKM/EersDavel6FzJJbdSv30cPsn8FV461t5/K6I1Ezaq298+7zh+k0dMlSrZc4PapZjsEWT/Szk="
@@ -25,8 +23,6 @@ notifications:
       on_failure: always
       template:
         - "secure token made for production"
-        - "%{repository_slug} Deployment (%{commit}) : %{message}"
-        - 'Performed by: %{author}'
         - 'Build details: %{build_url}'
     - rooms:
         - travis-testworkspace:LOKiRm5HRCiXHYQWJSzMs8Ik#build_fail_staging
@@ -34,8 +30,13 @@ notifications:
       on_failure: always
       template:
         - "plain token"
-        - "%{repository_slug} Deployment (%{commit}) : %{message}"
-        - 'Performed by: %{author}'
+        - 'Build details: %{build_url}'
+    - rooms:
+        secure: "Y0WkV3PsAhs2Kc1l+2FUpjjRHy8rI4Cn26Fl0eUbxBWNYV3qndDboHT10xBqsCInubU6RpluxG+WQwEjDW+u9lLGkWR+3PCjZaxPB9aGrgL9XSlrphY69RpM5gBPeKXxhHHNEyzWsuB2fempa3bjwoDIlbFUNr1G4l+Zh8jaVoCM8E17cxu3X3jGqGL2upoZb13lJ/wJlwiwV5e3rmxM/6tMxKoG8sjsnssRDl7Au8+4ek2i4hZ1VVnwlk4jjxKDHx16rTIkhjKFs2YY6gkKCKr8LBWQleNDx7wWOlyRLVxFmODovsaGnRGozLnYHClFR0LOt3fymQ7PGveK66gN37mzhD+usJp0WDcFlNLMk1yX843U1cN9rl14iUa9E6+7X5Sle9bxQTrRtXkKNXZD3D7WGXih0Vg2Ky5ecPtc+FUwcwotRFcYfFdk8lPu5ggbgjcDnjMnLcX8rIwOiIw+EKSXEoLvH/gUwrtiFfu5HnNNOVnSnJKV4ZbabNBm019NXfzXRHJbvQeP5iLSr9I8qezMHIsEJzQ41CFML5g8lYXeH8eW2avo22fcNXdhcrljPTtWYgNnxYX3XX5cEJKFjxHj6daLYWi2lpAg3E4xy3KyPT7Cx6sgy/txrUW+Ma1PLNTwAgvhHyhk4p6o+zlrUKHOddxT4J/D7ZnfmewisQE="
+      on_success: always
+      on_failure: always
+      template:
+        - "secure token made for qe2"
         - 'Build details: %{build_url}'
 
 
