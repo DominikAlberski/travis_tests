@@ -1,6 +1,7 @@
 language: ruby
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
+- printenv | grep slack -i
 - ruby -e 'raise "MY_ENV is not set" unless ENV["MY_ENV"]'
 deploy:
   provider: pages:git
