@@ -10,34 +10,34 @@ deploy:
     branch: main
 notifications:
   slack:
+    # - rooms:
+    #     - travis-testworkspace:jTiR7Pzm8DiIMNfuldB34Q7p#tci
+    #   on_success: always
+    #   on_failure: always
+    #   template:
+    #     - "plain token"
+    #     - 'Build details: %{build_url}'
     - rooms:
-        - travis-testworkspace:jTiR7Pzm8DiIMNfuldB34Q7p#tci
-      on_success: always
-      on_failure: always
-      template:
-        - "plain token"
-        - 'Build details: %{build_url}'
-    - rooms:
-      secure: "LUYfQiOoA6JymK6Dy+NjAlDrmGob7oEFItcY5p3pgRADwHbm77aE3/nrVpXpbqs6nTFyDTNFLKdIDJkf9UpMAHgzXyvDEDoUslqIEmGDJN763RNHEytEJUA6IIv/XF/uosKdfFksEczoWEq8KnKQfaPrnySXfaX4ppqVjXpPrK7l1+Fi2XpdxXxJqKvJWskBHcVliX52yGfba02xA9PRnCgLutW8RLrhCJThgX2TUPlgPlHMWj1rd8K35rfENJFB/CtQlV7umBTT9ZHhdRlVKR+wP7yVDjIJ7HIuCRAXt+edOtc6B0E6oCvbJCI3PMEz95Mj9TKWsDXvLwMCPvZJ/AEzEi3zX6aofWmX/hKG5dAUkclhmkfRUwcx9hdNbNJAPovfie67TM4VSWEVKIAvo9t3ayTR9nBrdHU5SF+rYkHPkOBP1lUqV4en0clkDfPtDoyoNgxFf6ZwjTxkpx6rtdeQGKpmHruPNq1tqfxhPWl8ALp3FDpGkGc97tVKmkL2mIjaakXuTMEpKUZKuw2QEiVz6vZEDJELheU6avrS67a+PodBc5wJNrrci58EvRJFtlCC0f4XLCoWI7f3KW478Imr2Rr2COnDHLQj2asoKXZkiAGfHOw/WDJuW1XRCIoy+cP4NYrLkCEuyzISw40GJ5s5mTaNwQ3yPpd7AZiqRz4="
+      secure: "KokfpfjH9QHChbIokt7hEkRNptfALFHxf3sJom6cRqjR4Gq4o9w9NbdRqQqkQE+vOqug4+2k28tdavIo8SeuCYHbDb8evlC0c2NGDfm8JIi8IXfAbpj7I0VBYdRrSNtova8NqRkXOGdUwAx8J4Hzb44CRbZT3vB22tV0OWeu3xkF4xvrEpICX6HzhNhoSewPrYIcw9WhWhGYrgrQ94ccgUnkNo/SKwXk2RPkdJJkYsvxKdJu8FDTqhxak1t6WjnJ4gcu0u1EF454FPsxtsebThRX4Kj9tXIVAnxgWagGvJM4I9dDVJf2ezqhn5ALF8FqcwiU3xBBHhBZaY8jLkaudLS8KEZ0Ky+rSUf1Amm3K2OomlAnZ6CqhG9qRqQBMGW3BDqD6qanMk2t31SAIAjT5J5wb3RX88AMwyBIVFPwulz1d7E0o6pufCmjIwynhd9zmXmiDNipOrxMfs7g0v2VUIYy3TJIxzZaBzrzw68C4SWR4stVEoRUrG3/dqfb9wx8PEoSN1/mHwxW74s0BVOVA/S3bDg+lM1YcAoKOqkTa1l4iofc14vedxeXpODbAeqCopQ+0e2BbqU17ViH1Jeicums7OfHjb5pKPFZXjzdtB4Xrmo0u8HhGvRhmhHZMhsUfdyne61MGCHSu463TqZ5UaDJhNf13dIHeinUgng6H9U="
       on_success: always
       on_failure: always
       template:
         - "secure token made for production"
         - 'Build details: %{build_url}'
-    - rooms:
-        - travis-testworkspace:LOKiRm5HRCiXHYQWJSzMs8Ik#build_fail_staging
-      on_success: never
-      on_failure: always
-      template:
-        - "plain token"
-        - 'Build details: %{build_url}'
-    - rooms:
-        secure: "Y0WkV3PsAhs2Kc1l+2FUpjjRHy8rI4Cn26Fl0eUbxBWNYV3qndDboHT10xBqsCInubU6RpluxG+WQwEjDW+u9lLGkWR+3PCjZaxPB9aGrgL9XSlrphY69RpM5gBPeKXxhHHNEyzWsuB2fempa3bjwoDIlbFUNr1G4l+Zh8jaVoCM8E17cxu3X3jGqGL2upoZb13lJ/wJlwiwV5e3rmxM/6tMxKoG8sjsnssRDl7Au8+4ek2i4hZ1VVnwlk4jjxKDHx16rTIkhjKFs2YY6gkKCKr8LBWQleNDx7wWOlyRLVxFmODovsaGnRGozLnYHClFR0LOt3fymQ7PGveK66gN37mzhD+usJp0WDcFlNLMk1yX843U1cN9rl14iUa9E6+7X5Sle9bxQTrRtXkKNXZD3D7WGXih0Vg2Ky5ecPtc+FUwcwotRFcYfFdk8lPu5ggbgjcDnjMnLcX8rIwOiIw+EKSXEoLvH/gUwrtiFfu5HnNNOVnSnJKV4ZbabNBm019NXfzXRHJbvQeP5iLSr9I8qezMHIsEJzQ41CFML5g8lYXeH8eW2avo22fcNXdhcrljPTtWYgNnxYX3XX5cEJKFjxHj6daLYWi2lpAg3E4xy3KyPT7Cx6sgy/txrUW+Ma1PLNTwAgvhHyhk4p6o+zlrUKHOddxT4J/D7ZnfmewisQE="
-      on_success: always
-      on_failure: always
-      template:
-        - "secure token made for qe2"
-        - 'Build details: %{build_url}'
+    # - rooms:
+    #     - travis-testworkspace:LOKiRm5HRCiXHYQWJSzMs8Ik#build_fail_staging
+    #   on_success: never
+    #   on_failure: always
+    #   template:
+    #     - "plain token"
+    #     - 'Build details: %{build_url}'
+    # - rooms:
+    #     secure: "Y0WkV3PsAhs2Kc1l+2FUpjjRHy8rI4Cn26Fl0eUbxBWNYV3qndDboHT10xBqsCInubU6RpluxG+WQwEjDW+u9lLGkWR+3PCjZaxPB9aGrgL9XSlrphY69RpM5gBPeKXxhHHNEyzWsuB2fempa3bjwoDIlbFUNr1G4l+Zh8jaVoCM8E17cxu3X3jGqGL2upoZb13lJ/wJlwiwV5e3rmxM/6tMxKoG8sjsnssRDl7Au8+4ek2i4hZ1VVnwlk4jjxKDHx16rTIkhjKFs2YY6gkKCKr8LBWQleNDx7wWOlyRLVxFmODovsaGnRGozLnYHClFR0LOt3fymQ7PGveK66gN37mzhD+usJp0WDcFlNLMk1yX843U1cN9rl14iUa9E6+7X5Sle9bxQTrRtXkKNXZD3D7WGXih0Vg2Ky5ecPtc+FUwcwotRFcYfFdk8lPu5ggbgjcDnjMnLcX8rIwOiIw+EKSXEoLvH/gUwrtiFfu5HnNNOVnSnJKV4ZbabNBm019NXfzXRHJbvQeP5iLSr9I8qezMHIsEJzQ41CFML5g8lYXeH8eW2avo22fcNXdhcrljPTtWYgNnxYX3XX5cEJKFjxHj6daLYWi2lpAg3E4xy3KyPT7Cx6sgy/txrUW+Ma1PLNTwAgvhHyhk4p6o+zlrUKHOddxT4J/D7ZnfmewisQE="
+    #   on_success: never
+    #   on_failure: always
+    #   template:
+    #     - "secure token made for qe2"
+    #     - 'Build details: %{build_url}'
 
 
 
