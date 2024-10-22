@@ -12,9 +12,9 @@ deploy:
 notifications:
   slack:
     - rooms:
-      secure: "KokfpfjH9QHChbIokt7hEkRNptfALFHxf3sJom6cRqjR4Gq4o9w9NbdRqQqkQE+vOqug4+2k28tdavIo8SeuCYHbDb8evlC0c2NGDfm8JIi8IXfAbpj7I0VBYdRrSNtova8NqRkXOGdUwAx8J4Hzb44CRbZT3vB22tV0OWeu3xkF4xvrEpICX6HzhNhoSewPrYIcw9WhWhGYrgrQ94ccgUnkNo/SKwXk2RPkdJJkYsvxKdJu8FDTqhxak1t6WjnJ4gcu0u1EF454FPsxtsebThRX4Kj9tXIVAnxgWagGvJM4I9dDVJf2ezqhn5ALF8FqcwiU3xBBHhBZaY8jLkaudLS8KEZ0Ky+rSUf1Amm3K2OomlAnZ6CqhG9qRqQBMGW3BDqD6qanMk2t31SAIAjT5J5wb3RX88AMwyBIVFPwulz1d7E0o6pufCmjIwynhd9zmXmiDNipOrxMfs7g0v2VUIYy3TJIxzZaBzrzw68C4SWR4stVEoRUrG3/dqfb9wx8PEoSN1/mHwxW74s0BVOVA/S3bDg+lM1YcAoKOqkTa1l4iofc14vedxeXpODbAeqCopQ+0e2BbqU17ViH1Jeicums7OfHjb5pKPFZXjzdtB4Xrmo0u8HhGvRhmhHZMhsUfdyne61MGCHSu463TqZ5UaDJhNf13dIHeinUgng6H9U="
-      on_success: always
-      on_failure: always
-      template:
-        - "secure token made for production"
-        - 'Build details: %{build_url}'
+      - secure: "KokfpfjH9QHChbIokt7hEkRNptfALFHxf3sJom6cRqjR4Gq4o9w9NbdRqQqkQE+vOqug4+2k28tdavIo8SeuCYHbDb8evlC0c2NGDfm8JIi8IXfAbpj7I0VBYdRrSNtova8NqRkXOGdUwAx8J4Hzb44CRbZT3vB22tV0OWeu3xkF4xvrEpICX6HzhNhoSewPrYIcw9WhWhGYrgrQ94ccgUnkNo/SKwXk2RPkdJJkYsvxKdJu8FDTqhxak1t6WjnJ4gcu0u1EF454FPsxtsebThRX4Kj9tXIVAnxgWagGvJM4I9dDVJf2ezqhn5ALF8FqcwiU3xBBHhBZaY8jLkaudLS8KEZ0Ky+rSUf1Amm3K2OomlAnZ6CqhG9qRqQBMGW3BDqD6qanMk2t31SAIAjT5J5wb3RX88AMwyBIVFPwulz1d7E0o6pufCmjIwynhd9zmXmiDNipOrxMfs7g0v2VUIYy3TJIxzZaBzrzw68C4SWR4stVEoRUrG3/dqfb9wx8PEoSN1/mHwxW74s0BVOVA/S3bDg+lM1YcAoKOqkTa1l4iofc14vedxeXpODbAeqCopQ+0e2BbqU17ViH1Jeicums7OfHjb5pKPFZXjzdtB4Xrmo0u8HhGvRhmhHZMhsUfdyne61MGCHSu463TqZ5UaDJhNf13dIHeinUgng6H9U="
+    on_success: always
+    on_failure: always
+    template:
+      - "secure token made for production"
+      - 'Build details: %{build_url}'
