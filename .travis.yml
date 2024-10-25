@@ -16,6 +16,8 @@ deploy:
   keep_history: true
   url: github.com
   local_dir: pages/
+  edge:
+    branch: da_supp-1150
   on:
     branch:
     - main
