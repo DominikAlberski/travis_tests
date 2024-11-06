@@ -4,7 +4,7 @@ script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 before_deploy:
   - rvm use 2.7.6
-  - echo "travis_internal_ruby is $travis_internal_ruby"
+  - echo "travis_internal_ruby is $(travis_internal_ruby)"
 deploy:
   edge:
     branch: v2.0.3-beta.4
