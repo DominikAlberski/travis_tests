@@ -2,26 +2,14 @@ dist: focal
 language: ruby
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
-before_deploy:
-  # check uri gem version
-  # - gem list uri
-  # update uri gem
-  # - gem uninstall uri
-  # - gem install uri -v 0.13.0
 deploy:
-  provider: pages:git # this differs from schibsted
-  token: "$GITHUB_TOKEN"
-  verbose: true
+  provider: releases
+  name: $TRAVIS_TAG
+  token: $GITHUB_TOKEN
+  tag_name: $TRAVIS_TAG
   cleanup: false
-  keep_history: true
-  url: github.com
-  local_dir: pages/
-  edge:
-    branch: da_supp-1150
+  overwrite: true
+  file_glob: true
+  file: /home/travis/build/result/*
   on:
-    branch:
-    - main
-    - deploy
-notifications:
-  slack:
-    secure: Y45SmkJHY+JTV4z6NDxpUmJHr7WBYIDiSUSx+JRN1XZc1WI/j4Q/lZ0rjSsb7QjC8S9gaBZRNNwUemeN4AX8kDZtPwLzh5XhGn55VRWPPtLwh8s3n6NemygVssez15HT/CDBHZPwW2BhuF0uZFSO73k0oIMEH9zCJouSXE+YuWaF/7EKy99HRnPl8a3ZyB/nbO9XyvZ4fLgPxWnUgiI/WaciRCUZLW24AS55mSajf4VkKvBp4PXSXO6ggo1pckbkTyP2MEBdCrTn2NIoRwSJHQqF3Rbv4IFjHCJhB+Az0O+IqA5m91CsIIsXuPAOxWHrm7kUYcKBzH5F7MWBpbd/J1f1DAx3pkWgs1ns3ucJAi2UAbBEWdjxfVnf5RGaoq8/cYLjM4Go6I/3/iALTlrBhDYdDJE8fJ6m+BKXjRMwJxukOziygCY0vvR2cmmcBqViwdF9L0KoRuZGlkQ90kiTjR07c1VShDDIgbUrUiNr3vLWlK/l6iYIzLKRVKcWGKYz6vc8gIw72cok9WNLhr/EP+z/WHYkoK0lIz6TnBot1AIPGVDnqDgc6ILVFydGRdkWiVVhzP4cD423hQVDIl6phEaod0y6sJ+q3GKisMRSC0fRu8aV94GkwDR6sgH3/3PGZ8BQLAIlzm6Eq17L9CAUgjrm7NrxNXujvUPhwfDC7JI=
+    tags: true
