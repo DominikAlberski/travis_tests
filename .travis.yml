@@ -3,6 +3,8 @@ language: ruby
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 deploy:
+  edge:
+    branch: v2.0.3-beta.4
   provider: releases
   name: $TRAVIS_TAG
   token: $GITHUB_TOKEN
