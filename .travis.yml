@@ -3,8 +3,10 @@ language: ruby
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 before_deploy:
-  - rvm use 2.7.6
+  - rvm use 2.7.6 --default
   - echo "travis_internal_ruby is $(travis_internal_ruby)"
+  - rvm list
+
 deploy:
   edge:
     branch: v2.0.3-beta.4
