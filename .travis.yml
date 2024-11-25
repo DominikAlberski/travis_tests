@@ -2,10 +2,10 @@ dist: focal
 language: ruby
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
-before_deploy:
-  - rvm use 2.7.6 --default
-  - echo "travis_internal_ruby is $(travis_internal_ruby)"
-  - rvm list
+# before_deploy:
+  # - rvm use 2.7.6 --default
+  # - echo "travis_internal_ruby is $(travis_internal_ruby)"
+  # - rvm list
 
 deploy:
   dpl_version: 2.0.5.2.beta.1
