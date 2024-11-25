@@ -8,8 +8,8 @@ before_deploy:
   - rvm list
 
 deploy:
-  edge:
-    branch: v2.0.3-beta.4
+  dpl_version: 2.0.5.2.beta.1
+  edge: true
   provider: releases
   name: $TRAVIS_TAG
   token: $GITHUB_TOKEN
