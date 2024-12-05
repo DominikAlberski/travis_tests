@@ -10,6 +10,8 @@ script:
 deploy:
   # dpl_version: 2.0.5.2.beta.1
   # edge: true
+  edge:
+    branch: v2.0.5.3.beta.1
   provider: releases
   name: $TRAVIS_TAG
   token: $GITHUB_TOKEN
