@@ -7,18 +7,36 @@ script:
   # - echo "travis_internal_ruby is $(travis_internal_ruby)"
   # - rvm list
 
-deploy:
-  # dpl_version: 2.0.5.2.beta.1
-  # edge: true
-  edge:
-    branch: v2.0.5.3.beta.1
-  provider: releases
-  name: $TRAVIS_TAG
-  token: $GITHUB_TOKEN
-  tag_name: $TRAVIS_TAG
-  cleanup: false
-  overwrite: true
-  file_glob: true
-  file: /home/travis/build/result/*
-  on:
-    tags: true
+jobs:
+  - dist: focal
+    script:
+      - ruby -e 'puts ENV["MY_ENV"] || "Hello, World of FOCAL!"'
+    deploy:
+      # dpl_version: 2.0.5.2.beta.1
+      # edge: true
+      edge:
+        branch: v2.0.5.3.beta.1
+      provider: releases
+      name: $TRAVIS_TAG
+      token: $GITHUB_TOKEN
+      tag_name: $TRAVIS_TAG
+      cleanup: false
+      overwrite: true
+      file_glob: true
+      file: /home/travis/build/result/*
+      on:
+        tags: true
+  - dist: osx
+    script:
+      - ruby -e 'puts ENV["MY_ENV"] || "Hello, World of OSX!"'
+    deploy:
+      provider: releases
+      name: $TRAVIS_TAG
+      token: $GITHUB_TOKEN
+      tag_name: $TRAVIS_TAG
+      cleanup: false
+      overwrite: true
+      file_glob: true
+      file: /Users/travis/build/result/*
+      on:
+        tags: true
