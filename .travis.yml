@@ -13,7 +13,7 @@ jobs:
       script:
         - ruby -e 'puts ENV["MY_ENV"] || "Hello, World of FOCAL!"'
       before_deploy:
-        - gem install json -v 2.9.0
+        - gem install json -v 2.9.0 --verbose
       deploy:
         # dpl_version: 2.0.5.2.beta.1
         # edge: true
@@ -28,18 +28,18 @@ jobs:
         file: /home/travis/build/result/*
         on:
           tags: true
-    - os: osx
-      script:
-        - ruby -e 'puts ENV["MY_ENV"] || "Hello, World of OSX!"'
-      deploy:
-        dpl_version: 1.10.15
-        provider: releases
-        name: $TRAVIS_TAG
-        token: $GITHUB_TOKEN
-        tag_name: $TRAVIS_TAG
-        cleanup: false
-        overwrite: true
-        file_glob: true
-        file: /Users/travis/build/result/*
-        on:
-          tags: true
+    # - os: osx
+    #   script:
+    #     - ruby -e 'puts ENV["MY_ENV"] || "Hello, World of OSX!"'
+    #   deploy:
+    #     dpl_version: 1.10.15
+    #     provider: releases
+    #     name: $TRAVIS_TAG
+    #     token: $GITHUB_TOKEN
+    #     tag_name: $TRAVIS_TAG
+    #     cleanup: false
+    #     overwrite: true
+    #     file_glob: true
+    #     file: /Users/travis/build/result/*
+    #     on:
+    #       tags: true
