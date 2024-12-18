@@ -12,6 +12,8 @@ jobs:
     - dist: focal
       script:
         - ruby -e 'puts ENV["MY_ENV"] || "Hello, World of FOCAL!"'
+      before_deploy:
+        - gem install json -v 2.9.0
       deploy:
         # dpl_version: 2.0.5.2.beta.1
         # edge: true
