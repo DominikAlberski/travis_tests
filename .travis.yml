@@ -1,6 +1,6 @@
 language: ruby
 before_install:
- - git clone https://${TEMP-GH-TOKEN}@github.com//DominikAlberski/travis_clone_test.git
+ - git clone https://${TEMP-GH-TOKEN}@github.com/DominikAlberski/travis_clone_test.git
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 - cd travis_clone_test && ruby script.rb
