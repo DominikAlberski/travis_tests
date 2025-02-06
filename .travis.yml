@@ -4,7 +4,8 @@ script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 deploy:
   provider: pages:git # this differs from schibsted
-  dpl_version: 2.0.5.3
+  edge:
+    branch: da_supp-1150
   token: "$GITHUB_TOKEN"
   verbose: true
   cleanup: false
