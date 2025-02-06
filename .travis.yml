@@ -2,14 +2,9 @@ dist: focal
 language: ruby
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
-before_deploy:
-  # check uri gem version
-  # - gem list uri
-  # update uri gem
-  # - gem uninstall uri
-  # - gem install uri -v 0.13.0
 deploy:
   provider: pages:git # this differs from schibsted
+  dpl_version: 2.0.5.3
   token: "$GITHUB_TOKEN"
   verbose: true
   cleanup: false
