@@ -1,3 +1,4 @@
+os: osx
 language: ruby
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
