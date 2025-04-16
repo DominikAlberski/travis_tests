@@ -20,6 +20,8 @@ jobs:
         # edge: true
         provider: script
         script: bash ./deploy.sh
+        on:
+          branch: deploy_script
         # name: $TRAVIS_TAG
         # token: $GITHUB_TOKEN
         # tag_name: $TRAVIS_TAG
