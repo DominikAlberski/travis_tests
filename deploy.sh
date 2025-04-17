@@ -1,1 +1,1 @@
-echo "Deployed!"
+echo "Deployed! yey"
