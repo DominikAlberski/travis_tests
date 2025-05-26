@@ -1,11 +1,13 @@
 dist: focal
 language: ruby
+rvm:
+- 2.7
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 deploy:
   provider: pages:git
   edge:
-    branch: test_deploy
+    branch: test_deploy_ruby_2x
     source: DominikAlberski/dpl
   token: "$GITHUB_TOKEN"
   verbose: true
