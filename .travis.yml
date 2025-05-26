@@ -13,3 +13,5 @@ deploy:
   keep_history: true
   url: github.com
   local_dir: pages/
+  on:
+    branch: deploy_with_custom_dpl_gem
