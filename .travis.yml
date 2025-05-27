@@ -7,6 +7,7 @@ script:
 before_deploy:
   - 'echo "travis internal ruby is: $(travis_internal_ruby)"'
   - 'echo "custom ruby is: $(ruby -v)"'
+  - 'gem uninstall cl'
 deploy:
   provider: pages:git
   edge:
