@@ -1,13 +1,11 @@
 os: linux
 dist: xenial
-# rvm: 2.0.0
+rvm: 2.0.0
 language: ruby
 bundler_args: "--without development --deployment"
 sudo: false
 before_install:
 - gem install bundler -v '< 2.0'
-- rvm list known
-- rvm install 2.0.0-p648
 stage: test
 script:
 - echo "Running ruby"
