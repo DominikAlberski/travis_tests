@@ -1,6 +1,6 @@
 os: linux
 dist: xenial
-rvm: 2.0.0
+rvm: 2.0.0-p648
 language: ruby
 bundler_args: "--without development --deployment"
 sudo: false
