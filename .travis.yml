@@ -1,5 +1,5 @@
 os: linux
-dist: trusty
+dist: xenial
 # rvm: 2.0.0
 language: ruby
 bundler_args: "--without development --deployment"
