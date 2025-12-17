@@ -2,7 +2,7 @@ os: linux
 dist: jammy
 vm:
   create:
-    name: image_0_0_1
+    name: image_0_0_1_0
 language: ruby
 rvm:
   - 3.3.5
