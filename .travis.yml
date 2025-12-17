@@ -5,7 +5,7 @@ vm:
     name: image_0_0_1
 language: ruby
 rvm:
-  - 3.5
+  - 3.3.5
 before_instal:
   - gem install rails
 script:
